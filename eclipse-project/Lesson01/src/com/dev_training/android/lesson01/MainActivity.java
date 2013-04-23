@@ -12,7 +12,8 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		Toast.makeText(this, "Hello Android with Toast", Toast.LENGTH_LONG).show();
+		findViewById(R.id.button1).setOnClickListener(this);
+		
 	}
 
 	@Override
