@@ -6,6 +6,8 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.SeekBar;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnClickListener {
@@ -15,7 +17,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		Toast.makeText(this, "Hello Android with Toast", Toast.LENGTH_LONG).show();
+		findViewById(R.id.button1).setOnClickListener(this);
+		
 		
 		
 		findViewById(R.id.seekBar1).setOnClickListener(this);
@@ -34,6 +37,9 @@ public class MainActivity extends Activity implements OnClickListener {
 		SeekBar seekBar1 = (SeekBar)findViewById(R.id.seekBar1);
 		
 		Toast.makeText(this, "seekBar1 value = "+seekBar1.getProgress(), Toast.LENGTH_LONG).show();
+
+		Toast.makeText(this, "You've just clicked the button.", Toast.LENGTH_LONG).show();
+		
 	}
 
 }
